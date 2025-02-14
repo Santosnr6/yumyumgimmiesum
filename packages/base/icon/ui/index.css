@@ -1,0 +1,11 @@
+.icon {
+    width: 4rem;
+    aspect-ratio: 1;
+    border: 3px solid var(--grey-lightest);
+    display: grid;
+    place-items: center;
+
+    .icon__image {
+        width: 65%;
+    }
+}

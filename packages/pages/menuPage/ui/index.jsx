@@ -1,6 +1,7 @@
 import './index.css';
 import { useState, useEffect } from 'react';
 import { useGetMenuQuery } from '@yumyumApp/api';
+import { Header } from "@yumyumApp/header";
 
 export const MenuPage = () => {
     const { data, isError, isLoading } = useGetMenuQuery();
@@ -11,9 +12,7 @@ export const MenuPage = () => {
 
     return (
         <main className="page menu-page">
-            <header className="page__header">
-                
-            </header>
+            <Header logo={true} cartClass={'outline'} />
         </main>
     );
 }
