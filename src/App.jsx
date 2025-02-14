@@ -1,8 +1,14 @@
+import { RouterProvider } from "react-router-dom";
+import { Button } from '@yumyumApp/button';
+import { router } from "@yumyumApp/router";
+
 function App() {
 
   return (
-    <h1>Hello</h1>
+    <>
+      <RouterProvider router={ router } />
+    </>
   )
 }
 
-export default App
+export default App;
