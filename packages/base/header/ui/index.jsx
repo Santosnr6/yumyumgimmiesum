@@ -5,7 +5,7 @@ import { CartIcon } from "@yumyumApp/cartIcon";
 export const Header = ({logo, cartClass}) => {
     return (
         <header className="page__header">
-            { logo && <Icon /> }
+            {<Icon logo={ logo } /> }
             {cartClass !== 'none' && <CartIcon cartClass={ cartClass } />}
         </header>
     );

@@ -1,3 +1,36 @@
-main {
-    background-color: blue;
+.cart-page {
+    background-color: var(--grey-lightest);
+    display: flex;
+    flex-direction: column;
+    color: var(--grey-darkest);
+
+    .cart-page__content {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+
+        .cart-page__bottom-group {
+            margin-top: auto;
+
+            .cart-page__summary {
+                background-color: var(--grey-very-light);
+                width: 100%;
+                padding: 1rem;
+                border-radius: 4px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-weight: 700;
+
+                .cart-page__total {
+                    font-size: 1.5rem;
+                }
+
+                .cart-page__sum {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+
 }

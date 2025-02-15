@@ -8,4 +8,9 @@
     .icon__image {
         width: 65%;
     }
+
+    .icon__arrow {
+        color: var(--grey-darkest);
+        font-size: 2rem;
+    }
 }

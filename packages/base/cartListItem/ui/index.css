@@ -1,0 +1,30 @@
+.cart__list-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: .5rem;
+    padding: 1rem 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+
+    .cart__list-item-name {
+        white-space: nowrap;
+    }
+
+    .cart__dots {
+        overflow: hidden;
+    }
+
+    .cart__dots::before {
+        content: "...............................................................................................";
+        display: block;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .cart__list-item-price {
+        white-space: nowrap;
+    }
+}
