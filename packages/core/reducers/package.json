@@ -1,4 +1,4 @@
 {
-    "name": "@yumyumApp/api",
+    "name": "@yumyumApp/reducers",
     "main": "./index.js"
 }           

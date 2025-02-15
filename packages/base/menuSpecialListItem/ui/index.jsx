@@ -1,11 +1,9 @@
 import "./index.css";
 import { toUpper } from '@yumyumApp/utils';
 
-export const MenuSpecialListItem = ({name, price, items}) => {
-    console.log(items);
-    
+export const MenuSpecialListItem = ({name, price, items, onClick}) => {    
     return (
-        <li className="menu__list-item">
+        <li className="menu__list-item" onClick={ () => onClick(items) }>
                     <div className="menu__list-item-upper">
                         <p className="menu__list-item-name">{toUpper(name)}</p>
                         <span className="menu__dots"></span>
