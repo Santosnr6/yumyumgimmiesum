@@ -1,0 +1,14 @@
+.menu__list-item-specials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+.menu__list-item-special {
+    padding: .5rem;
+    background-color: var(--grey-light);
+}
+
+.menu__list-item-special--selected {
+    background-color: var(--grey-darkest);
+}
