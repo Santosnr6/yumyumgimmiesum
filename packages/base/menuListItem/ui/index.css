@@ -39,21 +39,6 @@
     .menu__list-item-ingredients {
         font-size: 0.8rem;
     }
-
-    .menu__list-item-dips {
-        display: flex;
-        flex-wrap: wrap;
-        gap: .5rem;
-    }
-
-    .menu__list-item-dip {
-        padding: .5rem;
-        background-color: var(--grey-light);
-    }
-
-    .menu__list-item-dip--selected {
-        background-color: var(--grey-darkest);
-    }
 }
 
 .menu__list-item:last-child {

@@ -1,7 +1,7 @@
 .menu {
     background-color: var(--grey-dark);
     margin: 2rem 0;
-    height: 95%;
+    min-height: 70%;
     color: var(--grey-lightest);
 
     .menu__title {
