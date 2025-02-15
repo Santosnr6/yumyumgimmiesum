@@ -1,0 +1,12 @@
+.menu {
+    background-color: var(--grey-dark);
+    margin: 2rem 0;
+    height: 95%;
+    color: var(--grey-lightest);
+
+    .menu__title {
+        padding: 2rem 1rem;
+        font-size: 2rem;
+    }
+}
+
