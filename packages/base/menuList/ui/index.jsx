@@ -36,10 +36,10 @@ export const MenuList = ({ onClick }) => {
                     })
                 }
                 {
-                    dips && <MenuSpecialListItem name={ 'dipsås' } price={ 19 } items={ dips } onClick={ handleSpecialListItemClick } />
+                    dips && <MenuSpecialListItem name={ 'dippsås' } price={ 19 } items={ dips } onClick={ onClick } />
                 }
                 {
-                    drinks && <MenuSpecialListItem name={ 'dryck' } price={ 25 } items={ drinks } onClick={ handleSpecialListItemClick } />
+                    drinks && <MenuSpecialListItem name={ 'dryck' } price={ 25 } items={ drinks } onClick={ onClick } />
                 }
             </ul>
         </section>
