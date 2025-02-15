@@ -18,7 +18,7 @@ export const CartIcon = ({cartClass}) => {
     }
 
     return (
-        <Link to="/cart" className="link">
+        <Link to="/cart" className="link cart-link">
             <figure className={ `cart-icon cart-icon--${cartClass}` }>
                 { qty > 0 && cartClass !== "transparent" && <span className="cart-icon__counter">{qty}</span> }
                 <img src="./src/assets/cart.svg" alt="Cart Icon" className="cart-icon__image" />

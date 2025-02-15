@@ -13,6 +13,7 @@
         justify-content: space-between;
         font-size: 1.25rem;
         font-weight: 700;
+        gap: .5rem;
     }
 
     .menu__list-item-name {
@@ -29,7 +30,6 @@
         text-align: center;
         white-space: nowrap;
         overflow: hidden;
-        margin: 0 1rem;
     }
 
     .menu__list-item-price {
