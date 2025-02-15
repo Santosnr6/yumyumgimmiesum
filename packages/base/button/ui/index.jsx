@@ -1,5 +1,10 @@
-export const Button = () => {
+import { toUpper } from '@yumyumApp/utils';
+import './index.css';
+
+export const Button = ({onClick, text, type}) => {
     return (
-        <h1>button</h1>
+        <button onClick={ onClick } className={`button button--${type}`}>
+            {toUpper(text)}
+        </button>
     );
 }
