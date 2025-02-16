@@ -14,9 +14,19 @@ export const apiSlice = createApi({
                 }
             })
         }),
+        postOrder : builder.query({
+            query: (order) => ({
+                url: "/s0j6/orders",
+                headers: {
+                    'x-zocom': "yum-24wDDIiKn23xmDqw"
+                },
+                body : JSON.stringify(order)
+            })
+        }),
     }),
 });
 
 export const {
-    useGetMenuQuery
+    useGetMenuQuery,
+    usePostOrderQuery
 } = apiSlice;
