@@ -12,3 +12,9 @@
     background-color: var(--grey-darkest);
     color: var(--grey-lightest);
 }
+
+.button--outline {
+    color: var(--grey-very-light);
+    background-color: transparent;
+    border: 1px solid var(--grey-very-light);
+}
