@@ -14,13 +14,14 @@ export const apiSlice = createApi({
                 }
             })
         }),
-        postOrder : builder.query({
+        postOrder : builder.mutation({
             query: (order) => ({
+                method: "POST",
                 url: "/s0j6/orders",
                 headers: {
                     'x-zocom': "yum-24wDDIiKn23xmDqw"
                 },
-                body : JSON.stringify(order)
+                body : order
             })
         }),
     }),
@@ -28,5 +29,5 @@ export const apiSlice = createApi({
 
 export const {
     useGetMenuQuery,
-    usePostOrderQuery
+    usePostOrderMutation
 } = apiSlice;

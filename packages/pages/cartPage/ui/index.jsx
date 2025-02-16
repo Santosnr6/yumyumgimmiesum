@@ -2,6 +2,7 @@ import './index.css';
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
+import { usePostOrderMutation } from '@yumyumApp/api';
 import { toUpper } from '@yumyumApp/utils';
 import { Header } from '@yumyumApp/header';
 import { CartList } from "@yumyumApp/cartList";
@@ -9,17 +10,36 @@ import { Button } from '@yumyumApp/button';
 
 export const CartPage = () => {
     const [sum, setSum] = useState(0);
+    const [orderItems, setOrderItems] = useState(null);
     const cart = useSelector(state => state.cart);
     const navigate = useNavigate();
+
+    const [postOrder, { data, isError, isLoading }] = usePostOrderMutation();
 
     useEffect(() => {
         setSum(0);
         cart.forEach(product => setSum(s => s += (product.qty * product.price)));
     }, [cart]);
 
+    useEffect(() => {
+        if(!isLoading) console.log('order:', data);
+    }, [data]);
+
     const handleBtnClick = () => {
+        placeOrder();
         navigate('/order');
     }
+
+    const placeOrder = async () => {
+        const items = cart.flatMap(item => Array(item.qty).fill(item.id));
+    
+        try {
+            const response = await postOrder({ items }).unwrap();
+            console.log('Order lagd:', response);
+        } catch (error) {
+            console.error('Misslyckades att lägga order:', error);
+        }
+    };
 
     return (
         <main className="page cart-page">

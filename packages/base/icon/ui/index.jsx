@@ -9,7 +9,7 @@ export const Icon = ({logo}) => {
                 {
                     logo ? 
                     <img src="./src/assets/yygs.png" alt="Page Logotype" className="icon__image" /> :
-                    <i class="fa-solid fa-arrow-left icon__arrow"></i>
+                    <i className="fa-solid fa-arrow-left icon__arrow"></i>
                 }        
             </figure>
         </Link>
