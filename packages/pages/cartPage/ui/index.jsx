@@ -1,7 +1,8 @@
 import './index.css';
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { clearCart } from '@yumyumApp/reducers';
 import { usePostOrderMutation } from '@yumyumApp/api';
 import { toUpper } from '@yumyumApp/utils';
 import { Header } from '@yumyumApp/header';
@@ -13,6 +14,7 @@ export const CartPage = () => {
     const [orderItems, setOrderItems] = useState(null);
     const cart = useSelector(state => state.cart);
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     const [postOrder, { data, isError, isLoading }] = usePostOrderMutation();
 
@@ -25,17 +27,14 @@ export const CartPage = () => {
         if(!isLoading) console.log('order:', data);
     }, [data]);
 
-    const handleBtnClick = () => {
-        placeOrder();
-        navigate('/order');
-    }
-
     const placeOrder = async () => {
         const items = cart.flatMap(item => Array(item.qty).fill(item.id));
     
         try {
             const response = await postOrder({ items }).unwrap();
             console.log('Order lagd:', response);
+            dispatch(clearCart());
+            navigate(`/order/${response.order.id}`);
         } catch (error) {
             console.error('Misslyckades att lägga order:', error);
         }
@@ -51,7 +50,7 @@ export const CartPage = () => {
                         <p className="cart-page__total">{ toUpper('totalt') }</p>
                         <p className="cart-page__sum">{`${sum} ${toUpper('sek')}`}</p>
                     </div>
-                    <Button text={ 'take my money!' } onClick={ handleBtnClick } type={ 'solid' } />
+                    <Button text={ 'take my money!' } onClick={ placeOrder } type={ 'solid' } />
                 </section>
             </section>
         </main>

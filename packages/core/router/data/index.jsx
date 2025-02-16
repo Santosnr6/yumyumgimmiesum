@@ -8,6 +8,6 @@ export const router = createBrowserRouter([
     { path : "/", element: <MenuPage /> },
     { path : "/menu", element : <MenuPage /> },
     { path : "/cart", element : <CartPage /> },
-    { path : "/order", element : <OrderPage /> },
-    { path : "/receipt", element : <ReceiptPage /> },
+    { path : "/order/:id", element : <OrderPage /> },
+    { path : "/receipt/:id", element : <ReceiptPage /> },
 ]);
