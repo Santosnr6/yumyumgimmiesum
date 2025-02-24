@@ -1,0 +1,42 @@
+.receipt__list-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: .5rem;
+    padding: 1rem 0;
+    width: 100%;
+
+    .receipt__list-item-upper {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.25rem;
+        font-weight: 700;
+        gap: .5rem;
+    }
+
+    .receipt__list-item-name {
+        white-space: nowrap;
+    }
+
+    .receipt__dots {
+        overflow: hidden;
+    }
+
+    .receipt__dots::before {
+        content: "...............................................................................................";
+        display: block;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .receipt__list-item-price {
+        white-space: nowrap;
+    }
+
+    .receipt__list-item-ingredients {
+        font-size: 0.8rem;
+    }
+}

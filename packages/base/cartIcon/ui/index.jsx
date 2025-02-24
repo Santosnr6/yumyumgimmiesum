@@ -7,8 +7,7 @@ export const CartIcon = ({cartClass}) => {
     const [qty, setQty] = useState(0);
     const cart = useSelector(state => state.cart);
     useEffect(() => {
-        setNewQty();
-        console.log(cart);        
+        setNewQty();       
     }, [cart]);
 
     const setNewQty = () => {

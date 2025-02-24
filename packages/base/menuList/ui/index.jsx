@@ -21,11 +21,7 @@ export const MenuList = ({ onClick }) => {
             setDrinks(drinkItems);
         }        
     }, [data]);
-
-    const handleSpecialListItemClick = (product) => {
-        console.log('klickade:', product);
-    }
-
+    
     return (
         <section className="menu">
             <h1 className="menu__title">{toUpper('meny')}</h1>
