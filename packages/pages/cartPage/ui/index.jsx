@@ -11,7 +11,6 @@ import { Button } from '@yumyumApp/button';
 
 export const CartPage = () => {
     const [sum, setSum] = useState(0);
-    const [orderItems, setOrderItems] = useState(null);
     const cart = useSelector(state => state.cart);
     const navigate = useNavigate();
     const dispatch = useDispatch();
@@ -22,10 +21,6 @@ export const CartPage = () => {
         setSum(0);
         cart.forEach(product => setSum(s => s += (product.qty * product.price)));
     }, [cart]);
-
-    useEffect(() => {
-        if(!isLoading) console.log('order:', data);
-    }, [data]);
 
     const placeOrder = async () => {
         const items = cart.flatMap(item => Array(item.qty).fill(item.id));
