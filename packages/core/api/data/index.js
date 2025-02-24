@@ -32,11 +32,20 @@ export const apiSlice = createApi({
                 body : order
             })
         }),
+        getReceipt : builder.query({
+            query: (id) => ({
+                url: `/receipts/${id}`,
+                headers: {
+                    'x-zocom': "yum-24wDDIiKn23xmDqw"
+                }
+            })
+        })
     }),
 });
 
 export const {
     useGetMenuQuery,
     useGetOrderQuery,
-    usePostOrderMutation
+    usePostOrderMutation,
+    useGetReceiptQuery
 } = apiSlice;

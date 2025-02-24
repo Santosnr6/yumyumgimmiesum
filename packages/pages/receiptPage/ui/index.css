@@ -1,3 +1,6 @@
-main {
-    background-color: blue;
+.receipt-page {
+    background-color: var(--grey-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

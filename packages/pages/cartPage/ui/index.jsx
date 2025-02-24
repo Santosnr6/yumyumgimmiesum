@@ -27,7 +27,6 @@ export const CartPage = () => {
     
         try {
             const response = await postOrder({ items }).unwrap();
-            console.log('Order lagd:', response);
             dispatch(clearCart());
             navigate(`/order/${response.order.id}`);
         } catch (error) {

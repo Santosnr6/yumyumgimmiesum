@@ -1,11 +1,7 @@
 import "./index.css";
 import { toUpper, formatIngredients } from '@yumyumApp/utils';
-import { useDispatch } from "react-redux";
-import { addToCart } from "@yumyumApp/reducers";
-import { useEffect } from "react";
 
 export const MenuListItem = ({product, onClick}) => {
-    const dispatch = useDispatch();
     
     return (
         <li className="menu__list-item" onClick={() => onClick(product)}>

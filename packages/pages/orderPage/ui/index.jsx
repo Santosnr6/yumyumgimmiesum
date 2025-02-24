@@ -12,12 +12,7 @@ export const OrderPage = () => {
     const { data, isError, isLoading } = useGetOrderQuery(id, { skip: !id });
     const navigate = useNavigate();
     
-    useEffect(() => {
-        console.log(data?.order);
-    }, [data]);
-
     const calculateEta = () => {   
-        console.log()
         if(!isLoading) {
             const timestampDate = new Date(data?.order.timestamp);
             const etaDate = new Date(data?.order.eta);
