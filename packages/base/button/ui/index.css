@@ -1,0 +1,20 @@
+.button {
+    border: none;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    width: 100%;
+}
+
+.button--solid {
+    background-color: var(--grey-darkest);
+    color: var(--grey-lightest);
+}
+
+.button--outline {
+    color: var(--grey-very-light);
+    background-color: transparent;
+    border: 1px solid var(--grey-very-light);
+}

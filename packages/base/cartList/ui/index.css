@@ -1,0 +1,7 @@
+.cart {
+    border-top: 3px dotted var(--grey-light);
+    border-bottom: 3px dotted var(--grey-light);
+    padding: 1rem 0;
+    margin: 1rem .5rem;
+}
+

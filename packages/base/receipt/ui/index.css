@@ -1,0 +1,54 @@
+.receipt {
+    background-color: var(--grey-lightest);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;   
+    width: 100%; 
+    margin: 1rem 0;
+
+    .receipt__top-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .5rem;
+        padding: 3rem 1rem;
+
+        .receipt__logo {
+            width: 42px;
+        }
+    
+        .receipt__title {
+            font-size: 1.5rem;
+        }
+    
+        .receipt__id {
+            font-size: .8rem;
+            letter-spacing: 1.5px;
+        }
+
+        .receipt__list {
+            width: 100%;
+        }
+    }
+
+    .receipt__bottom-container {
+        background-color: var(--grey-very-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        
+        .receipt__total-text {
+            font-weight: 700;
+        }
+
+        .receipt__vat-text {
+            font-size: .8rem;
+        }
+
+        .receipt__sum {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+    }
+}
